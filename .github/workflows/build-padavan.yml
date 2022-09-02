@@ -2,11 +2,11 @@
 name: build-pandavan
 
 on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
+  # release:
+  #   types: [published]
+  # push:
+  #   tags:
+  #   - 'v*'
   #  branches: 
   #    - master
 #  schedule:
