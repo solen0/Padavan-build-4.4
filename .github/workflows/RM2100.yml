@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -82,9 +82,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
         ##内网穿透服务##
         
-        echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >> .config #mentohust
+        echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #mentohust
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=y" >> .config #MiniEAP
         
-        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >> .config #在线文件管理服务
+        echo "CONFIG_FIRMWARE_INCLUDE_CADDY=n" >> .config #在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config  #ALDRIVER  ~3m
 
         #########################################################################################
